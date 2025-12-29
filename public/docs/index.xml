@@ -6,14 +6,6 @@
     <description>Recent content in Docs on Marinyacc | Weblog</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 29 Dec 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/docs/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>我的文章标题</title>
-      <link>http://localhost:1313/docs/1/</link>
-      <pubDate>Mon, 29 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/1/</guid>
-      <description>&lt;p&gt;这里是你想在首页展示的&lt;strong&gt;摘要内容&lt;/strong&gt;（第一段文字）。&lt;/p&gt;&#xA;&lt;p&gt;这里是&lt;strong&gt;正文内容&lt;/strong&gt;。&#xA;当读者在首页看到这篇文章时&lt;/p&gt;&#xA;&lt;p&gt;``&lt;/p&gt;&#xA;&lt;p&gt;之后的所有文字都会被隐藏，&#xA;只有点击标题进入文章详情页才能看到。&lt;/p&gt;</description>
-    </item>
   </channel>
 </rss>
