@@ -17,7 +17,7 @@ theme = "simple-frame"
     weight = 2
 
 [Params]
-  Subtitle = "Minimal Hugo theme."
+  Subtitle = "QQ:2157489466"
   mainSections = ["posts"]
   post_meta = ["date", "categories", "taglist"]
   dateformat = "2006-01-02"
