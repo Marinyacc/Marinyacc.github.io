@@ -3,15 +3,10 @@ title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 lastmod: {{ .Date }}
 description: ""
-draft: true
-toc: true
+draft: false
 weight: 1
 tags: []
----
-
-## 摘要
-> 简要描述本文内容
-
+summary: ""
 ---
 
 ## 正文

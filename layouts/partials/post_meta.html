@@ -1,0 +1,11 @@
+{{- $root := . -}}
+{{- with .Param "post_meta" -}}
+    {{- range $field := . -}}
+        {{- $p := printf "post_meta/%s.html" $field -}}
+        {{- partial $p $root -}}
+    {{- end -}}
+{{- end -}}
+
+<span id="busuanzi_container_page_pv" style="display:none; margin-left: 10px;">
+    <span> | 浏览 </span><span id="busuanzi_value_page_pv"></span>
+</span>

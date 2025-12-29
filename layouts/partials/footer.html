@@ -1,0 +1,14 @@
+<footer class="footer">
+	<div class="container footer__container flex">
+		{{ partial "footer_links.html" . }}
+		<div class="footer__copyright">
+			&copy; {{ now.Format "2006" }} {{ .Site.Params.copyright | default .Site.Title }}.
+			<span class="footer__copyright-credits">{{ T "footer_credits" | safeHTML }}</span>
+		</div>
+	</div>
+    <div class="busuanzi-footer">
+     <span id="busuanzi_container_site_pv">
+        本站总访问量 <span id="busuanzi_value_site_pv"></span> 次
+     </span>
+    </div>
+</footer>

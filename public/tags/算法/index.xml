@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>算法 on Marinyacc | Weblog</title>
+    <link>http://localhost:1313/tags/%E7%AE%97%E6%B3%95/</link>
+    <description>Recent content in 算法 on Marinyacc | Weblog</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 29 Dec 2025 15:58:22 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>H2</title>
+      <link>http://localhost:1313/posts/h2/</link>
+      <pubDate>Mon, 29 Dec 2025 15:58:22 +0800</pubDate>
+      <guid>http://localhost:1313/posts/h2/</guid>
+      <description>&lt;h2 id=&#34;preview&#34;&gt;&lt;em&gt;Preview&lt;/em&gt;&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;em&gt;this is a test&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;content&#34;&gt;Content&lt;/h2&gt;&#xA;&lt;p&gt;114514&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

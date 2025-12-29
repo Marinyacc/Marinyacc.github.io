@@ -1,26 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Simple Frame</title>
+    <title>Marinyacc | Weblog</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content on Simple Frame</description>
+    <description>Recent content on Marinyacc | Weblog</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 29 Dec 2025 15:11:52 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 29 Dec 2025 16:30:58 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hello2</title>
-      <link>http://localhost:1313/docs/hello2/</link>
-      <pubDate>Mon, 29 Dec 2025 15:11:52 +0800</pubDate>
-      <guid>http://localhost:1313/docs/hello2/</guid>
-      <description>&lt;h2 id=&#34;22&#34;&gt;22&lt;/h2&gt;</description>
+      <title>H2</title>
+      <link>http://localhost:1313/posts/h2/</link>
+      <pubDate>Mon, 29 Dec 2025 16:30:58 +0800</pubDate>
+      <guid>http://localhost:1313/posts/h2/</guid>
+      <description>11</description>
     </item>
     <item>
-      <title>Hello</title>
-      <link>http://localhost:1313/posts/hello/</link>
-      <pubDate>Mon, 29 Dec 2025 15:04:13 +0800</pubDate>
-      <guid>http://localhost:1313/posts/hello/</guid>
-      <description>&lt;h2 id=&#34;11&#34;&gt;11&lt;/h2&gt;</description>
+      <title>我的文章标题</title>
+      <link>http://localhost:1313/docs/1/</link>
+      <pubDate>Mon, 29 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/1/</guid>
+      <description>&lt;p&gt;这里是你想在首页展示的&lt;strong&gt;摘要内容&lt;/strong&gt;（第一段文字）。&lt;/p&gt;&#xA;&lt;p&gt;这里是&lt;strong&gt;正文内容&lt;/strong&gt;。&#xA;当读者在首页看到这篇文章时&lt;/p&gt;&#xA;&lt;p&gt;``&lt;/p&gt;&#xA;&lt;p&gt;之后的所有文字都会被隐藏，&#xA;只有点击标题进入文章详情页才能看到。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>测试摘要</title>
+      <link>http://localhost:1313/posts/h/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/h/</guid>
+      <description>这是我手动写的摘要，如果首页出现了这段话，说明模板没问题。</description>
     </item>
   </channel>
 </rss>
