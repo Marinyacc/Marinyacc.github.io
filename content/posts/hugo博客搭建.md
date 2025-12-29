@@ -1,13 +1,15 @@
 ---
-title: "Hugo博客搭建简单教程"
+title: Hugo博客搭建简单教程
 date: 2025-12-29T16:59:36+08:00
 lastmod: 2025-12-29T16:59:36+08:00
-description: "博客搭建"
+description: 博客搭建
 draft: false
 weight: 1
-tags: ["教程","Go"]
-summary: "如何利用静态网站生成器hugo + GithubPage作为服务器 快速搭建个人网站"
-math : false
+tags:
+  - 教程
+  - Go
+summary: 如何利用静态网站生成器hugo + GithubPage作为服务器 快速搭建个人网站
+math: false
 ---
 
 
@@ -211,6 +213,17 @@ git push origin main
 ```
 即可推送至网站
 
+可作为脚本`upload.bat`
+```bat
+@echo off
+echo 开始推送到 GitHub...
+git add .
+git commit -m "update %date% %time%"
+git push origin main
+echo 推送完成！
+pause
+```
+双击或命令行执行`.\upload.bat`
 # 六.更多内容
 
 ## Latex
