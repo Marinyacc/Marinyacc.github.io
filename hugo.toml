@@ -1,40 +1,66 @@
 baseURL = 'https://marinyacc.github.io/' 
 languageCode = 'zh-cn'
-title = "Simple Frame"
-theme = "simple-frame"  
+title = "Simple Frame | 个人博客" # 建议加上一句话描述
+theme = "simple-frame" 
+
+# 网站描述，有利于搜索引擎(SEO)抓取
+description = "这是 marinyacc 的个人博客，记录技术笔记与生活。"
 
 [permalinks]
   search = "/search/"
+  posts = "/posts/:title/" # 让文章链接更美观（可选）
 
+# 导航菜单
+[[menu.main]]
+    name = "首页"
+    url = "/"
+    weight = 1
 [[menu.main]]
     name = "博客"
     url = "/posts/"
-    weight = 1
-
+    weight = 2
 [[menu.main]]
     name = "文档"
     url = "/docs/"
-    weight = 2
+    weight = 3
 
 [Params]
-  Subtitle = "QQ:2157489466"
+  Subtitle = "QQ: 2157489466"
   mainSections = ["posts"]
   post_meta = ["date", "categories", "taglist"]
   dateformat = "2006-01-02"
-  toc = true
-  pager = true
+  
+  # 功能增强
+  toc = true            # 开启文章目录
+  pager = true          # 开启上一篇/下一篇翻页
+  wordCount = true      # 是否显示字数统计
+  readTime = true       # 是否显示预计阅读时间
+  
+  # 版权声明 (显示在页面底部)
+  copyright = "© 2025 marinyacc. All rights reserved."
 
+# 侧边栏配置
 [Params.sidebar]
   home = "right"
   list = "right"
   single = "right"
-  widgets = ["search", "categories", "taglist", "recent", "archives"]
+  # 增加了 bio (自我介绍) 和 social (社交链接)
+  widgets = ["search", "bio", "social", "categories", "taglist", "recent", "archives"]
+
+# 侧边栏社交链接配置
+[[Params.social]]
+    name = "GitHub"
+    icon = "github" # 需确保主题支持对应的图标库
+    url = "https://github.com/marinyacc"
 
 [Params.widgets]
   recent_num = 5
   categories_counter = true
   tags_counter = true
-  
+  # 自我介绍小部件内容
+  bio_title = "关于我"
+  bio_description = "一名热爱记录的学习者。欢迎交流！"
+
 [taxonomies]
   tag = "tags"
   category = "categories"
