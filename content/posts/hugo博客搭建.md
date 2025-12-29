@@ -16,7 +16,9 @@ math: false
 # Tips
 
 一些不懂的命令或者操作可以问AI
+
 推荐`Gemini3` ，个人认为比`GPT`好用
+
 https://gemini.google.com/app
 
 # 一. 环境配置
@@ -269,8 +271,15 @@ math: true
 1. `github` `feature`启用`discussion`
 2. 本地添加`giscus`官方`url`生成对应的`js`文件
 3. 在`single.html`下修改逻辑
+
+
+## Markdown编辑器
+
+推荐使用`Obsidian`
+
 # 七.提醒
 1. 如果浏览器无法正常渲染，尝试将插件关闭
 # 八.参考内容
 [Hugo官方文档中文版|Hugo中文文档 | Hugo官方文档](https://hugo.opendocs.io/)
+
 [从零到一：使用 Hugo 和 GitHub Pages 搭建个人博客 | jaxiu He](https://blog.jaxiu.cn/blog/2025-07/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E4%BD%BF%E7%94%A8-hugo-%E5%92%8C-github-pages-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/)
