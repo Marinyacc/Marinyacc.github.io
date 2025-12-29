@@ -7,6 +7,7 @@ draft: false
 weight: 1
 tags: []
 summary: ""
+math : true
 ---
 
 ## 正文

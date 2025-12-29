@@ -1,0 +1,20 @@
+{{ define "main" }}
+  <main class="main" role="main">
+	  <article class="post">
+		  <header class="post__header">
+			  <h1 class="post__title">{{ .Title }}</h1>
+	  		{{ with partial "post_meta.html" . -}}
+	  			<div class="post__meta meta">{{ . }}</div>
+		  	{{- end }}
+	  	</header>
+	  	{{ partial "post_thumbnail.html" (dict "class" "post" "page" .) }}
+			{{- partial "post_toc.html" . -}}
+      <div class="content post__content clearfix">
+		  	{{ .Content }}
+		  </div>
+	  </article>
+  </main>
+	{{ partial "related.html" . }}
+	{{ partial "pager.html" . }}
+	{{ if .Params.math }}{{ partial "math.html" . }}{{ end }}
+{{ end }}

@@ -64,7 +64,8 @@
 	  	</header>
 	  	<div class="content post__content clearfix">
 		  	<h2 id="正文">正文</h2>
-<p>在这里开始书写你的内容&hellip;</p>
+<p>$O(N)$
+在这里开始书写你的内容&hellip;</p>
 
 		  </div>
 	  </article>
@@ -79,6 +80,19 @@
 					</a>
 				</div>
 		</nav>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}
+            ]
+        });
+    });
+</script>
 
 			</div>
 			<aside class="sidebar"><div class="widget-search widget">
