@@ -1,0 +1,50 @@
+baseURL = 'http://localhost:1313/' 
+languageCode = 'zh-cn'
+title = "Simple Frame"
+theme = "simple-frame"  
+
+[permalinks]
+  search = "/search/"
+  
+[[menu.main]]
+    name = "博客"
+    url = "/posts/"
+    weight = 1
+
+[[menu.main]]
+    name = "文档"
+    url = "/docs/"
+    weight = 2
+
+[Params]
+  Subtitle = "Minimal Hugo theme."
+  mainSections = ["posts"]
+  post_meta = ["date", "categories", "taglist"]
+  dateformat = "2006-01-02"
+  toc = true
+  pager = true
+
+[Params.sidebar]
+  home = "right"
+  list = "right"
+  single = "right"
+  widgets = ["search", "categories", "taglist", "recent", "archives"]
+
+[Params.widgets]
+  recent_num = 5
+  categories_counter = true
+  tags_counter = true
+  
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  archive = "archives"
+
+[related]
+  includeNewer = true
+[[related.indices]]
+  name = "tags"
+  weight = 80
+[[related.indices]]
+  name = "categories"
+  weight = 60

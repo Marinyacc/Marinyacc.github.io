@@ -1,0 +1,3 @@
+[submodule "themes/simple-frame"]
+	path = themes/simple-frame
+	url = https://github.com/Dim0000/simple-frame.git
