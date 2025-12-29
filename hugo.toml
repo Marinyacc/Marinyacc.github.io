@@ -1,4 +1,4 @@
-baseURL = 'https://github.com/Marinyacc/Marinyacc.github.io' 
+baseURL = 'https://marinyacc.github.io/' 
 languageCode = 'zh-cn'
 title = "Simple Frame"
 theme = "simple-frame"  
