@@ -1,0 +1,94 @@
+---
+title: Mysql
+date: 2025-12-30T11:35:49+08:00
+lastmod: 2025-12-30T11:35:49+08:00
+description: Mysql
+draft: false
+weight: 1
+tags:
+  - 数据库
+summary: 数据库笔记
+math: false
+archives: 2025/12
+---
+
+# Mysql
+
+## 一.SQL
+
+### 1. **基本语法**
+- SQL可以单行或者多行书写，分号结尾
+- 可以使用空格或者缩进
+- SQL语句不区分大小写
+- 单行注释：`--`或`#` 多行注释 `/* */`
+
+
+1. **DDL(定义数据对象)**
+2. **DML(对数据进行增删改)**
+3. **DQL(查询数据)**
+4. **DCL(控制用户访问权限)**
+
+### 2.基本数据类型
+
+```bash
+tinyint #1byte
+smallint #2bytes
+mediumint #3bytes
+int或integer #4bytes
+bigint #5bytes
+
+float #4bytes
+double #8bytes
+decimal #精确小数点
+```
+
+```bash
+#blob描述二进制文件
+#text描述文本文件
+char  #定长字符串  char(10) 性能好
+varchar #变长字符串 varchar(10) 
+tinyblob
+tinytxt
+blob #65535bytes
+text
+mediumblob
+mediumtxt
+longblob
+longtxt #4294967295bytes 极大文本数据
+```
+
+```bash
+date #1000-01-01 ~ 9999-12-31
+time # -030:59:59 ~ 030:59:59
+year #1901 ~ 2155
+datetime #1010-01-01 00:00:00
+timestamp #时间戳
+```
+
+
+### 3.DDL
+是否加`[]`是可选的
+
+```bash
+show databases; 
+select database(); #查询当前数据库
+create database [if not exists] db_name [default charset 字符集] [collate 排序规则];
+drop database [if exists] db_name; #删除数据库
+use db_name;# 进入数据库
+```
+
+```bash
+show tables; #查看当前数据库的表
+desc tb_name; #查询表结构
+show create table tb_name; #查询指定表的建表语句
+```
+
+```bash
+craete table tb_name(
+	字段1 字段1类型 [comment 字段1注释]
+	字段2 字段2类型 [comment 字段2注释]
+	字段3 字段3类型 [comment 字段3注释]
+)[comment 表注释];
+```
+
+

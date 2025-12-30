@@ -14,7 +14,8 @@
 <link rel="stylesheet" href="/scss/style.min.c75052ac4d1b796c5fb62fd2324118556bfbdd9eb39a89f2513d9999eef44e4e.css">
 
 <link rel="shortcut icon" href="/favicon.ico">
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script async src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@2.3/bsz.pure.mini.js"></script>
+
 </head>
 <body class="body">
 	<div class="container container--outer">
@@ -62,19 +63,218 @@
         <a class="meta__link btn" href="/tags/go/" rel="tag">Go</a>
   </span>
 </div><span id="busuanzi_container_page_uv" style="display:none;">
-    | 访客数 <span id="busuanzi_value_page_uv"></span>
+    | 本页访客数 <span id="busuanzi_value_page_uv"></span> 人
 </span></div>
 	  	</header>
 	  	<div class="content post__content clearfix">
-		  	<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div>
+		  	<h1 id="tips">Tips</h1>
+<p>一些不懂的命令或者操作可以问AI</p>
+<p>推荐<code>Gemini3</code> ，个人认为比<code>GPT</code>好用</p>
+<p><a href="https://gemini.google.com/app">https://gemini.google.com/app</a></p>
+<h1 id="一-环境配置">一. 环境配置</h1>
+<p>搜索<code>hugo</code>官网并依次安装</p>
+<ol>
+<li><code>hugo</code></li>
+<li><code>Git</code></li>
+</ol>
+<p>推荐使用<code>vscode</code>作为编辑器</p>
+<h1 id="二本地初始化">二.本地初始化</h1>
+<p>本地新建文件夹<code>Weblog</code></p>
+<p>在文件夹目录下执行</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new site my-blog 
+</span></span><span style="display:flex;"><span>cd ./my-blog
+</span></span><span style="display:flex;"><span>git init
+</span></span></code></pre></div><p>作用：初始化<code>hugo</code> ， 本地<code>Git</code>仓库</p>
+<p>你会得到</p>
+<ul>
+<li><code>archetypes/</code>: 内容模板文件。</li>
+<li><code>content/</code>: 博客文章等内容。</li>
+<li><code>layouts/</code>: 网站布局和模板。</li>
+<li><code>static/</code>: 静态资源，如图片、CSS、JS。</li>
+<li><code>themes/</code>: 主题存放目录。</li>
+<li><code>hugo.toml</code>: 网站主配置文件。</li>
+</ul>
+<p>我们主要修改的是:<code>hugo.toml</code>配置文件</p>
+<p>前往<code>hugo</code>官网，选择自己喜欢的主题文件
+<a href="https://themes.gohugo.io/">Hugo Themes</a>
+点击<code>Download</code>跳转到对应的<code>Github</code>仓库</p>
+<p>执行</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git ./themes
+</span></span><span style="display:flex;"><span>git submodule add https://github.com/adityatelange/hugo-PaperMod.git <span style="color:#75715e">#对应的主题仓库地址</span>
+</span></span></code></pre></div><p>下载对应的主题文件到<code>./themes</code>文件夹下</p>
+<p>打开<code>hugo.toml</code></p>
+<p>修改基本配置</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#a6e22e">baseURL</span> = <span style="color:#e6db74">&#34;localhost:1313&#34;</span>  <span style="color:#75715e">#（重要）（之后换成你的域名/或者远程仓库名）</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">languageCode</span> = <span style="color:#e6db74">&#34;zh-cn&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#34;博客&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">theme</span> = <span style="color:#e6db74">&#34;PaperMod&#34;</span> <span style="color:#75715e">#你对应的主题的名字(重要)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">menu</span>] 
+</span></span><span style="display:flex;"><span>[[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]] 
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">identifier</span> = <span style="color:#e6db74">&#34;about&#34;</span> 
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;关于&#34;</span> 
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/about/&#34;</span> 
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">1</span> 
+</span></span><span style="display:flex;"><span>[[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]] 
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">identifier</span> = <span style="color:#e6db74">&#34;blog&#34;</span> 
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;博客&#34;</span> 
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/posts/&#34;</span> 
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">2</span>
+</span></span></code></pre></div><p>执行</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new posts/hello_world.md
+</span></span></code></pre></div><p>在<code>content</code>目录下创建<code>posts</code>目录，并新建一个<code>markdown</code>文件</p>
+<p>出现</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>--- 
+</span></span><span style="display:flex;"><span>title: &#34;我的第一篇文章&#34; 
+</span></span><span style="display:flex;"><span>date: 2022-11-20T09:03:20-08:00 
+</span></span><span style="display:flex;"><span>draft: true 
+</span></span><span style="display:flex;"><span>--- 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>在此处编辑文章
+</span></span></code></pre></div><p>将<code>draft</code>设置为<code>false</code> （为<code>true</code>时为草稿不显示）</p>
+<p>执行</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo server -D
+</span></span></code></pre></div><p>访问本地<code>localhost:1313</code>出现对应页面</p>
+<p>设置<code>.gitignore</code>文件</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/public/
+</span></span><span style="display:flex;"><span>/resources/
+</span></span><span style="display:flex;"><span>/.hugo_build.lock
+</span></span><span style="display:flex;"><span>/hugo_stats.json
+</span></span></code></pre></div><p>选择不将冗余文件同步到远程仓库
+这里不加<code>public</code>是因为 后续使用<code>Github Actions</code> 方便更新博客</p>
+<p>设置<code>Github Action</code>文件
+创建在<code>.github\workflows\hugo.yml</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>name: Deploy Hugo site to Pages
+</span></span><span style="display:flex;"><span>on:
+</span></span><span style="display:flex;"><span>  push:
+</span></span><span style="display:flex;"><span>    branches: <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;main&#34;</span><span style="color:#f92672">]</span>  <span style="color:#75715e"># 只有推送到 main 分支时才触发</span>
+</span></span><span style="display:flex;"><span>permissions:
+</span></span><span style="display:flex;"><span>  contents: read
+</span></span><span style="display:flex;"><span>  pages: write
+</span></span><span style="display:flex;"><span>  id-token: write
+</span></span><span style="display:flex;"><span>jobs:
+</span></span><span style="display:flex;"><span>  build:
+</span></span><span style="display:flex;"><span>    runs-on: ubuntu-latest
+</span></span><span style="display:flex;"><span>    steps:
+</span></span><span style="display:flex;"><span>      - name: Checkout
+</span></span><span style="display:flex;"><span>        uses: actions/checkout@v4
+</span></span><span style="display:flex;"><span>        with:
+</span></span><span style="display:flex;"><span>          submodules: recursive  <span style="color:#75715e"># 如果你的主题是 git submodule 形式，这行很重要</span>
+</span></span><span style="display:flex;"><span>          fetch-depth: <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>      - name: Setup Hugo
+</span></span><span style="display:flex;"><span>        uses: peaceiris/actions-hugo@v3
+</span></span><span style="display:flex;"><span>        with:
+</span></span><span style="display:flex;"><span>          hugo-version: <span style="color:#e6db74">&#39;latest&#39;</span>
+</span></span><span style="display:flex;"><span>          extended: true <span style="color:#75715e"># 建议开启，因为很多主题需要 extended 版本</span>
+</span></span><span style="display:flex;"><span>      - name: Build
+</span></span><span style="display:flex;"><span>        run: hugo --minify
+</span></span><span style="display:flex;"><span>      - name: Upload artifact
+</span></span><span style="display:flex;"><span>        uses: actions/upload-pages-artifact@v3
+</span></span><span style="display:flex;"><span>        with:
+</span></span><span style="display:flex;"><span>          path: ./public
+</span></span><span style="display:flex;"><span>  deploy:
+</span></span><span style="display:flex;"><span>    environment:
+</span></span><span style="display:flex;"><span>      name: github-pages
+</span></span><span style="display:flex;"><span>      url: <span style="color:#e6db74">${</span>{ steps.deployment.outputs.page_url <span style="color:#e6db74">}</span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    runs-on: ubuntu-latest
+</span></span><span style="display:flex;"><span>    needs: build
+</span></span><span style="display:flex;"><span>    steps:
+</span></span><span style="display:flex;"><span>      - name: Deploy to GitHub Pages
+</span></span><span style="display:flex;"><span>        id: deployment
+</span></span><span style="display:flex;"><span>        uses: actions/deploy-pages@v4
+</span></span></code></pre></div><p>最后将所有修改提交至本地仓库</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Initalize&#34;</span>
+</span></span></code></pre></div><h1 id="三远程仓库初始化">三.远程仓库初始化</h1>
+<p><code>Github</code>新建一个仓库 ：</p>
+<p><code>用户名.github.io</code></p>
+<p>执行</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git remote add origin <span style="color:#75715e">#你的仓库地址</span>
+</span></span><span style="display:flex;"><span>git branch -M main 
+</span></span><span style="display:flex;"><span>git push -u origin main 
+</span></span></code></pre></div><p>绑定本地仓库和<code>Github</code>仓库</p>
+<p>修改仓库设置</p>
+<p><code>Settings</code>-&gt;<code>Pages</code>-&gt;<code>Github Actions</code>启用
+若有域名
+在<code>Custom domain</code>中添加
+当然也需要修改域名设置</p>
+<h1 id="四一些修改">四.一些修改</h1>
+<p>修改<code>hugo.toml</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#a6e22e">baseURL</span> = <span style="color:#e6db74">&#39;...&#39;</span> <span style="color:#75715e">#你的域名</span>
+</span></span></code></pre></div><p>参考选择的主题的文档修改<code>toml</code>
+或者使用<code>AI</code> 的建议</p>
+<p>在<code>archetypes</code>下
+修改<code>default.md</code>: 更新 每次<code>new</code> 一个新文章的使用的模板</p>
+<h1 id="五更新博客">五.更新博客</h1>
+<p>设置好<code>github action</code>后只需要每次执行</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;update&#34;</span>
+</span></span><span style="display:flex;"><span>git push origin main
+</span></span></code></pre></div><p>即可推送至网站</p>
+<p>可作为脚本<code>upload.bat</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bat" data-lang="bat"><span style="display:flex;"><span>@<span style="color:#66d9ef">echo</span> off
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">echo</span> 开始推送到 GitHub...
+</span></span><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;update </span>%date%<span style="color:#e6db74"> </span>%time%<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>git push origin main
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">echo</span> 推送完成！
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">pause</span>
+</span></span></code></pre></div><p>双击或命令行执行<code>.\upload.bat</code></p>
+<h1 id="六更多内容">六.更多内容</h1>
+<h2 id="latex">Latex</h2>
+<p><code>hugo</code>使用<code>katex</code>进行渲染</p>
+<p>在<code>layouts</code>文件夹下新建
+<code>math.html</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">defer</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">defer</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js&#34;</span> <span style="color:#a6e22e">onload</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;renderMathInElement(document.body);&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>    document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;DOMContentLoaded&#34;</span>, <span style="color:#66d9ef">function</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">renderMathInElement</span>(document.<span style="color:#a6e22e">body</span>, {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">delimiters</span><span style="color:#f92672">:</span> [
+</span></span><span style="display:flex;"><span>                {<span style="color:#a6e22e">left</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;$$&#34;</span>, <span style="color:#a6e22e">right</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;$$&#34;</span>, <span style="color:#a6e22e">display</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>},
+</span></span><span style="display:flex;"><span>                {<span style="color:#a6e22e">left</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;$&#34;</span>, <span style="color:#a6e22e">right</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;$&#34;</span>, <span style="color:#a6e22e">display</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>}
+</span></span><span style="display:flex;"><span>            ]
+</span></span><span style="display:flex;"><span>        });
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><p>拉取你的主题的<code>single.html</code>到<code>layouts</code>文件夹下的<code>_default</code>文件夹
+在其最后一行添加</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ if .Params.math }}{{ partial &#34;math.html&#34; . }}{{ end }}
+</span></span></code></pre></div><p>每次新建文章时加入参数启用<code>latex</code>渲染</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>math: true
+</span></span></code></pre></div><h2 id="浏览量统计">浏览量统计</h2>
+<p>可使用不蒜子 、或者其他工具</p>
+<h2 id="评论功能">评论功能</h2>
+<p>使用<code>Giscus</code></p>
+<ol>
+<li><code>github</code> <code>feature</code>启用<code>discussion</code></li>
+<li>本地添加<code>giscus</code>官方<code>url</code>生成对应的<code>js</code>文件</li>
+<li>在<code>single.html</code>下修改逻辑</li>
+</ol>
+<h2 id="markdown编辑器">Markdown编辑器</h2>
+<p>推荐使用<code>Obsidian</code></p>
+<h1 id="七提醒">七.提醒</h1>
+<ol>
+<li>如果浏览器无法正常渲染，尝试将插件关闭</li>
+</ol>
+<h1 id="八参考内容">八.参考内容</h1>
+<p><a href="https://hugo.opendocs.io/">Hugo官方文档中文版|Hugo中文文档 | Hugo官方文档</a></p>
+<p><a href="https://blog.jaxiu.cn/blog/2025-07/%E4%BB%8E%E9%9B%B6%E5%88%B0%E4%B8%80%E4%BD%BF%E7%94%A8-hugo-%E5%92%8C-github-pages-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">从零到一：使用 Hugo 和 GitHub Pages 搭建个人博客 | jaxiu He</a></p>
+
 		  </div>
 	  </article>
   </main>
 	
 	
+		<nav class="pager flex">
+				<div class="pager__item pager__item--next">
+					<a class="pager__link" href="/posts/mysql/" rel="next">
+						<span class="pager__subtitle">Next&thinsp;»</span>
+						<p class="pager__title">Mysql</p>
+					</a>
+				</div>
+		</nav>
 	
 	<script src="https://giscus.app/client.js"
         data-repo="marinyacc/marinyacc.github.io"
@@ -105,12 +305,14 @@
 	<div class="widget__content">
 		<a class="widget-taglist__link widget__link btn" href="/tags/go/" title="go">go (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/%E6%95%99%E7%A8%8B/" title="教程">教程 (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" title="数据库">数据库 (1)</a>
 	</div>
 </div>
 <div class="widget-recent widget">
 	<h2 class="widget__title">Recent</h2>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/posts/mysql/">Mysql</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">Hugo博客搭建简单教程</a></li>
 		</ul>
 	</div>
@@ -119,6 +321,10 @@
   <div class="widget__content">
     <select onChange="location.href=value;">
       <option>Select Month</option>
+      
+      <option value="/archives/2025/12">2025/12 (1)</option>
+      
+      <option value="/archives/2025/1">2025/1 (1)</option>
       
     </select>
   </div>

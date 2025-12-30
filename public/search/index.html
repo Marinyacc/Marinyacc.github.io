@@ -15,7 +15,8 @@
 <link rel="alternate" type="application/rss+xml" href="/search/index.xml" title="Marinyacc | Weblog">
 
 <link rel="shortcut icon" href="/favicon.ico">
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script async src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@2.3/bsz.pure.mini.js"></script>
+
 </head>
 <body class="body">
 	<div class="container container--outer">
@@ -73,21 +74,27 @@
 
 const data = [
       {
+        url: "/posts/mysql/",
+        title: "Mysql",
+        date: "2025-12-30T11:35:49+08:00",
+        body: "Mysql Mysql 一.SQL 1. 基本语法 SQL可以单行或者多行书写，分号结尾 可以使用空格或者缩进 SQL语句不区分大小写 单行注释：--或# 多行注释 /* */ DDL(定义数据对象) DML(对数据进行增删改) DQL(查询数据) DCL(控制用户访问权限) 2.基本数据类型 tinyint #1byte smallint #2bytes mediumint #3bytes int或integer #4bytes bigint #5bytes float #4bytes double #8bytes decimal #精确小数点 3.DDL 是否加[]是可选的 show databases; select database(); #查询当前数据库 create database [if not exists] db_name [default charset 字符集] [collate 排序规则]; drop database [if exists] db_name; #删除数据库 use db_name;# 进入数据库 show tables; #查看当前数据库的表 desc tb_name; #查询表结构 show create table tb_name; #查询指定表的建表语句 craete table tb_name( 字段1 字段1类型 [comment 字段1注释] 字段2 字段2类型 [comment 字段2注释] 字段3 字段3类型 [comment 字段3注释] )[comment 表注释];"
+      },
+      {
         url: "/posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/",
         title: "Hugo博客搭建简单教程",
         date: "2025-12-29T16:59:36+08:00",
-        body: "Hugo博客搭建简单教程 int main(){ return 0; }"
+        body: "Hugo博客搭建简单教程 Tips 一些不懂的命令或者操作可以问AI 推荐Gemini3 ，个人认为比GPT好用 https://gemini.google.com/app 一. 环境配置 搜索hugo官网并依次安装 hugo Git 推荐使用vscode作为编辑器 二.本地初始化 本地新建文件夹Weblog 在文件夹目录下执行 hugo new site my-blog cd ./my-blog git init 作用：初始化hugo ， 本地Git仓库 你会得到 archetypes/: 内容模板文件。 content/: 博客文章等内容。 layouts/: 网站布局和模板。 static/: 静态资源，如图片、CSS、JS。 themes/: 主题存放目录。 hugo.toml: 网站主配置文件。 我们主要修改的是:hugo.toml配置文件 前往hugo官网，选择自己喜欢的主题文件 Hugo Themes 点击Download跳转到对应的Github仓库 执行 git ./themes git submodule add https://github.com/adityatelange/hugo-PaperMod.git #对应的主题仓库地址 下载对应的主题文件到./themes文件夹下 打开hugo.toml 修改基本配置 baseURL = \u0026#34;localhost:1313\u0026#34; #（重要）（之后换成你的域名/或者远程仓库名） languageCode = \u0026#34;zh-cn\u0026#34; title = \u0026#34;博客\u0026#34; theme = \u0026#34;PaperMod\u0026#34; #你对应的主题的名字(重要) [menu] [[menu.main]] identifier = \u0026#34;about\u0026#34; name = \u0026#34;关于\u0026#34; url = \u0026#34;/about/\u0026#34; weight = 1 [[menu.main]] identifier = \u0026#34;blog\u0026#34; name = \u0026#34;博客\u0026#34; url = \u0026#34;/posts/\u0026#34; weight = 2 执行 hugo new posts/hello_world.md 在content目录下创建posts目录，并新建一个markdown文件 出现 --- title: \u0026#34;我的第一篇文章\u0026#34; date: 2022-11-20T09:03:20-08:00 draft: true --- 在此处编辑文章 将draft设置为false （为true时为草稿不显示） 执行 hugo server -D 访问本地localhost:1313出现对应页面 设置.gitignore文件 /public/ /resources/ /.hugo_build.lock /hugo_stats.json 选择不将冗余文件同步到远程仓库 这里不加public是因为 后续使用Github Actions 方便更新博客 设置Github Action文件 创建在.github\\workflows\\hugo.yml name: Deploy Hugo site to Pages on: push: branches: [\u0026#34;main\u0026#34;] # 只有推送到 main 分支时才触发 permissions: contents: read pages: write id-token: write jobs: build: runs-on: ubuntu-latest steps: - name: Checkout uses: actions/checkout@v4 with: submodules: recursive # 如果你的主题是 git submodule 形式，这行很重要 fetch-depth: 0 - name: Setup Hugo uses: peaceiris/actions-hugo@v3 with: hugo-version: \u0026#39;latest\u0026#39; extended: true # 建议开启，因为很多主题需要 extended 版本 - name: Build run: hugo --minify - name: Upload artifact uses: actions/upload-pages-artifact@v3 with: path: ./public deploy: environment: name: github-pages url: ${{ steps.deployment.outputs.page_url }} runs-on: ubuntu-latest needs: build steps: - name: Deploy to GitHub Pages id: deployment uses: actions/deploy-pages@v4 最后将所有修改提交至本地仓库 git add . git commit -m \u0026#34;Initalize\u0026#34; 三.远程仓库初始化 Github新建一个仓库 ： 用户名.github.io 执行 git remote add origin #你的仓库地址 git branch -M main git push -u origin main 绑定本地仓库和Github仓库 修改仓库设置 Settings-\u0026gt;Pages-\u0026gt;Github Actions启用 若有域名 在Custom domain中添加 当然也需要修改域名设置 四.一些修改 修改hugo.toml baseURL = \u0026#39;...\u0026#39; #你的域名 参考选择的主题的文档修改toml 或者使用AI 的建议 在archetypes下 修改default.md: 更新 每次new 一个新文章的使用的模板 五.更新博客 设置好github action后只需要每次执行 git add . git commit -m \u0026#34;update\u0026#34; git push origin main 即可推送至网站 可作为脚本upload.bat @echo off echo 开始推送到 GitHub... git add . git commit -m \u0026#34;update %date% %time%\u0026#34; git push origin main echo 推送完成！ pause 双击或命令行执行.\\upload.bat 六.更多内容 Latex hugo使用katex进行渲染 在layouts文件夹下新建 math.html \u0026lt;link rel=\u0026#34;stylesheet\u0026#34; href=\u0026#34;https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css\u0026#34;\u0026gt; \u0026lt;script defer src=\u0026#34;https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js\u0026#34;\u0026gt;\u0026lt;/script\u0026gt; \u0026lt;script defer src=\u0026#34;https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js\u0026#34; onload=\u0026#34;renderMathInElement(document.body);\u0026#34;\u0026gt;\u0026lt;/script\u0026gt; \u0026lt;script\u0026gt; document.addEventListener(\u0026#34;DOMContentLoaded\u0026#34;, function() { renderMathInElement(document.body, { delimiters: [ {left: \u0026#34;$$\u0026#34;, right: \u0026#34;$$\u0026#34;, display: true}, {left: \u0026#34;$\u0026#34;, right: \u0026#34;$\u0026#34;, display: false} ] }); }); \u0026lt;/script\u0026gt; 拉取你的主题的single.html到layouts文件夹下的_default文件夹 在其最后一行添加 {{ if .Params.math }}{{ partial \u0026#34;math.html\u0026#34; . }}{{ end }} 每次新建文章时加入参数启用latex渲染 math: true 浏览量统计 可使用不蒜子 、或者其他工具 评论功能 使用Giscus github feature启用discussion 本地添加giscus官方url生成对应的js文件 在single.html下修改逻辑 Markdown编辑器 推荐使用Obsidian 七.提醒 如果浏览器无法正常渲染，尝试将插件关闭 八.参考内容 Hugo官方文档中文版|Hugo中文文档 | Hugo官方文档 从零到一：使用 Hugo 和 GitHub Pages 搭建个人博客 | jaxiu He"
       },
       {
         url: "/",
         title: "Marinyacc | Weblog",
-        date: "2025-12-29T16:59:36+08:00",
+        date: "2025-12-30T11:35:49+08:00",
         body: "Marinyacc | Weblog"
       },
       {
         url: "/posts/",
         title: "Posts",
-        date: "2025-12-29T16:59:36+08:00",
+        date: "2025-12-30T11:35:49+08:00",
         body: "Posts"
       },
       {
@@ -123,12 +130,14 @@ search(keyword);
 	<div class="widget__content">
 		<a class="widget-taglist__link widget__link btn" href="/tags/go/" title="go">go (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/%E6%95%99%E7%A8%8B/" title="教程">教程 (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" title="数据库">数据库 (1)</a>
 	</div>
 </div>
 <div class="widget-recent widget">
 	<h2 class="widget__title">Recent</h2>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/posts/mysql/">Mysql</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">Hugo博客搭建简单教程</a></li>
 		</ul>
 	</div>
@@ -137,6 +146,10 @@ search(keyword);
   <div class="widget__content">
     <select onChange="location.href=value;">
       <option>Select Month</option>
+      
+      <option value="/archives/2025/12">2025/12 (1)</option>
+      
+      <option value="/archives/2025/1">2025/1 (1)</option>
       
     </select>
   </div>

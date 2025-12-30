@@ -10,6 +10,7 @@ tags:
   - Go
 summary: 如何利用静态网站生成器hugo + GithubPage作为服务器 快速搭建个人网站
 math: false
+archives: 2025/12
 ---
 
 
