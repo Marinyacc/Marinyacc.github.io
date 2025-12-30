@@ -75,6 +75,7 @@ select database(); #查询当前数据库
 create database [if not exists] db_name [default charset 字符集] [collate 排序规则];
 drop database [if exists] db_name; #删除数据库
 use db_name;# 进入数据库
+truncate table tb_name #删除指定表，并重新创建该表
 ```
 
 ```bash
@@ -89,6 +90,15 @@ craete table tb_name(
 	字段2 字段2类型 [comment 字段2注释]
 	字段3 字段3类型 [comment 字段3注释]
 )[comment 表注释];
+```
+
+
+```bash
+alter table tb_name add 字段名 类型 [comment 注释] [约束];#添加字段
+alter table tb_name modify 字段名 新类型; #修改字段数据类型
+alter table tb_name change 旧字段名 新字段名 类型 [comment 注释] [约束];#修改字段名和字段类型
+alter table tb_name drop 字段名 #删除字段
+alter table tb_name rename to 新表名 #修改表名
 ```
 
 
