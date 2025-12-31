@@ -5,12 +5,13 @@
             &copy; {{ now.Format "2006" }} {{ .Site.Params.copyright | default .Site.Title }}.
             <span class="footer__copyright-credits">{{ T "footer_credits" | safeHTML }}</span>
             
-            <div class="busuanzi-footer" style="margin-top: 5px; font-size: 0.9em; color: #888;">
-                <span id="busuanzi_container_site_pv" style="display:none;">
-                    本站总访问量 <span id="busuanzi_value_site_pv"></span> 次
+            {{/* Vercount 站点统计部分 */}}
+            <div class="vercount-footer" style="margin-top: 5px; font-size: 0.9em; color: #888;">
+                <span id="vercount_container_site_pv" style="display:none;">
+                    本站总访问量 <span id="vercount_value_site_pv"></span> 次
                 </span>
-                <span id="busuanzi_container_site_uv" style="display:none;">
-                    | 总访客数 <span id="busuanzi_value_site_uv"></span> 人
+                <span id="vercount_container_site_uv" style="display:none;">
+                    | 总访客数 <span id="vercount_value_site_uv"></span> 人
                 </span>
             </div>
         </div>
