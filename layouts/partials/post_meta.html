@@ -6,6 +6,9 @@
     {{- end -}}
 {{- end -}}
 
-<span id="busuanzi_container_page_pv" style="display:none;">
-    本文总阅读量 <span id="busuanzi_value_page_pv"></span> 次
-</span>
+{{- if .IsPage -}} <div class="post-busuanzi">
+  <span id="busuanzi_container_page_pv" style="display:none;">
+    <i class="fa fa-eye"></i> 本文总阅读量 <span id="busuanzi_value_page_pv"></span> 次
+  </span>
+</div>
+{{- end -}}
