@@ -118,5 +118,7 @@ insert into tb_name values (值1，值2...),(值1,值2..)..;#插入多个记录
 
 ```bash
 update tb_name set 字段名1=值1，字段名2=值2，...[where 条件]; #修改字段值
-
+delete from tb_name [where 条件];
 ```
+
+### 5.DQL
