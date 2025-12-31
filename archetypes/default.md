@@ -8,7 +8,7 @@ weight: 1
 tags: []
 summary: ""
 math: true
-archives: "{{ .Date.Format "2006/01" }}"
+archives: 
 ---
 
 ## 正文
