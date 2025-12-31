@@ -14,6 +14,12 @@ archives: 2025/12
 
 # Mysql
 
+
+# 零.学习资源
+[黑马程序员 MySQL数据库入门到精通，从mysql安装到mysql高级、mysql优化全囊括_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1Kr4y1i7ru/?spm_id_from=333.788.player.switch&vd_source=eeed231bc80c4f445afa41c5d10d993)
+
+
+
 ## 一.SQL
 
 ### 1. **基本语法**
@@ -102,3 +108,15 @@ alter table tb_name rename to 新表名 #修改表名
 ```
 
 
+### 4.DML
+
+```bash
+insert into tb_name (字段名1，字段名2，..) values (值1，值2...);
+insert into tb_name values (值1，值2...);# 顺序和字段顺序相同|插入一个记录
+insert into tb_name values (值1，值2...),(值1,值2..)..;#插入多个记录
+```
+
+```bash
+update tb_name set 字段名1=值1，字段名2=值2，...[where 条件]; #修改字段值
+
+```
