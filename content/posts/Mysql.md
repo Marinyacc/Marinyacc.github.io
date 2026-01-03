@@ -122,3 +122,107 @@ delete from tb_name [where 条件];
 ```
 
 ### 5.DQL
+
+```bash
+select
+	字段列表
+from 
+	表名列表
+where
+	条件列表
+group by
+	分组字段列表
+having
+	分组后条件列表
+order by
+	排序字段列表
+limit
+	分页参数
+```
+
+
+```bash
+select 字段1,字段2... from tb_name;
+select * from tb_name;
+
+select 字段1 [as 别名1] ,字段2 [as 别名2] from tb_name;
+
+select distinct 字段列表 from tb_name; #去除重复字段
+```
+
+`where` +条件
+```bash
+<,>,<=,=,!=.....
+in(....) 在in后的列表中的值,多选一
+like 占位符(_,%)
+is null
+between.. and ..
+and &&
+or ||
+not !
+```
+
+
+#### 聚合函数
+
+将一列数据作为一个整体,进行计算
+
+```bash
+count #统计数量
+max
+min
+avg
+sum
+
+select 聚合函数(字段) from tb_name;
+```
+
+null值不参与聚合函数的运算
+
+#### 分组查询
+
+`select 字段列表 from tb_name [where 条件] group by 分组字段名 [having 分组后过滤条件]`
+
+
+`where` 和 `having`的区别
+- `where`在分组之前过滤,`having`是分组后过滤
+- `where`不能对聚合函数判断,`having`可以
+
+一般查询的是聚合字段和分组字段,其他字段无意义
+
+
+#### 排序查询
+
+`select 字段列表 from tb_name order by 字段1 排序方式,字段2 排序方式`
+
+`asc 升序(默认) ,desc 降序`
+
+如果第一个字段相同,才会按照第二个字段排序
+
+
+#### 分页查询
+
+`select 字段列表 from tb_name limit 起始索引,查询记录数`
+
+起始索引从$0$开始.
+分页在不同数据库中有不同实现
+
+
+#### 执行顺序
+
+```bash
+from 
+	表名
+where
+	条件列表
+group by
+	分组字段列表
+having
+	分组后条件列表
+select
+	字段列表
+order by
+	排序字段列表
+limit
+	分页参数
+```
