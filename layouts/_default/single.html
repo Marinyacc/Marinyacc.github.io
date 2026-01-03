@@ -18,8 +18,5 @@
 	{{ partial "pager.html" . }}
 	{{ if .Params.math }}{{ partial "math.html" . }}{{ end }}
 	{{ partial "comments.html" . }}
-	{{ if .IsPage }}
-  	<span id="vercount_value_page_pv">Loading...</span> 次阅读
-	{{ end }}
 {{ end }}
 
