@@ -8,7 +8,7 @@ weight: 1
 tags:
   - 数据库
 summary: 数据库笔记
-math: false
+math: true
 archives: 2025/12
 ---
 
