@@ -226,3 +226,39 @@ order by
 limit
 	分页参数
 ```
+
+### 6.DCL
+
+#### 查询用户
+```bash
+use mysql;
+select * from user;
+```
+
+#### 创建用户
+
+```bash
+create user '用户名'@'主机名' identified by '密码'
+alter user '用户名'@'主机名' identified with mysql_natvie_password by '密码' #修改密码
+drop user '用户名'@'主机名' # 删除用户
+```
+
+#### 权限控制
+
+```bash
+#常见权限
+all
+select
+insert
+update
+delete
+alter
+drop
+create
+```
+
+```bash
+show grants for '用户名'@'主机名'; #查询权限
+grant 权限列表 on 数据库名.tb_name to '用户名'@'主机名' #授予权限
+revoke 权限列表 on 数据库名.tb_name from '用户名'@'主机名' #撤销权限
+```
