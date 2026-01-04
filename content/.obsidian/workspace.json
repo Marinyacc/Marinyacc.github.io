@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/我推的歌单.md",
+                "file": "posts/NJUPT数据结构速通.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "我推的歌单"
+              "title": "NJUPT数据结构速通"
             }
           }
         ]
@@ -185,8 +185,8 @@
   },
   "active": "4bfa6396277ea672",
   "lastOpenFiles": [
-    "posts/Mysql.md",
     "docs/我推的歌单.md",
+    "posts/Mysql.md",
     "posts/NJUPT数据结构速通.md",
     "posts/力扣链表题.md",
     "posts/hugo博客搭建.md",
