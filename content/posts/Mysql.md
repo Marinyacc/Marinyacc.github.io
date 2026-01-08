@@ -263,3 +263,50 @@ show grants for '用户名'@'主机名'; #查询权限
 grant 权限列表 on 数据库名.tb_name to '用户名'@'主机名' #授予权限
 revoke 权限列表 on 数据库名.tb_name from '用户名'@'主机名' #撤销权限
 ```
+
+
+## 函数
+
+### 字符串函数
+
+```bash
+concat(s1,s2,...,sn) #将s1,s2..sn拼接成一个字符串 
+lower(str)
+uppper(str)
+lpad(str,n,pad) #左填充
+rpad(str,n,pad)
+trim(str) #去掉字符串头部和尾部的空格
+substring(str,start,len)
+```
+
+### 数值函数
+
+```bash
+ceil(x)
+floor(x)
+mod(x,y)
+rand() #返回0~1的随机小数
+round(x,y) # 求x的四舍五入值，保留y位小数
+```
+
+### 日期函数
+
+```bash
+curdate()
+curtime()
+now() #返回当前日期和时间
+year(date)
+month(date)
+day(date)
+date_add(date,interval expr type) #往后推expr个type时间
+datediff(date1,date2) # date1-date2
+```
+
+### 流程函数
+
+```bash
+if(value,t,f) #如果value是true，返回t，否则返回f
+ifnull(v1,v2) #如果v1不为空返回v1，否则返回v2
+case when [val1] then [res1] ..else [defalut] end #如果val1为真，返回res1...,否则返回default
+case [expr] when [val1] then [res1] ...else [default] end #如果expr =val1，返回res1...,否则返回default
+```
