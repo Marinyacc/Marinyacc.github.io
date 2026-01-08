@@ -1,14 +1,14 @@
 ---
-title: "Redis"
+title: Redis
 date: 2026-01-07T16:49:07+08:00
 lastmod: 2026-01-07T16:49:07+08:00
 description: ""
-draft: false
+draft: true
 weight: 1
 tags: []
 summary: ""
 math: true
-archives: 
+archives:
 ---
 
 ## 正文

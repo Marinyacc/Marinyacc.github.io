@@ -3,7 +3,7 @@ title: Rabbitmq
 date: 2026-01-07T16:48:54+08:00
 lastmod: 2026-01-07T16:48:54+08:00
 description: 消息队列笔记
-draft: false
+draft: true
 weight: 1
 tags: []
 summary: 消息队列笔记
