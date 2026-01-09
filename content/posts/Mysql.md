@@ -310,3 +310,46 @@ ifnull(v1,v2) #如果v1不为空返回v1，否则返回v2
 case when [val1] then [res1] ..else [defalut] end #如果val1为真，返回res1...,否则返回default
 case [expr] when [val1] then [res1] ...else [default] end #如果expr =val1，返回res1...,否则返回default
 ```
+
+## 约束
+
+约束是作用于表中字段上的规则，用于限制存储在表中的数据
+
+```bash
+not null #限制该字段的数据不能是null
+unique #保证该字段的所有数据都是唯一的
+primary key #一行数据的唯一标识，要求非空且唯一 
+default #如果未指定该字段的值，则使用默认值
+check #保证字段值满足某一个条件
+foreign key #用于让两张表的数据建立联系,保持数据的一致性和完整性
+```
+
+### 外键约束
+
+```sql
+create table tb_name{
+	字段名 数据类型 
+	
+	..
+	[constraint] [外键名称] foreign key (外键字段名) references 主表 (主表列名)
+}
+alter table tb_name add constraint 外键名称 foreign key (外键字段名) references 主表（主表列名）;
+
+--删除外键
+alter table tb_name drop foreign key 外键名称;
+```
+
+
+外键的更新
+
+```sql
+no action --当在父表更新对应记录时，先检查该记录是否有外键，如果有则不允许更新
+restrict 
+cascade --当在父表删除/更新对应记录时，先检查该记录是否有外键，如果有删除/更新子表中的记录
+set null --当在父表更新对应记录时，先检查该记录是否有外键，如果有则设置子表该外键值为null
+set default --父表变更时，子表将外键设置成一个默认值（innodb不支持）
+```
+
+```sql
+alter table tb_name add constraint 外键名称 foreign key (外键名称) references 主表名 （主表字段名） on update cascade on delete cascade;
+```
