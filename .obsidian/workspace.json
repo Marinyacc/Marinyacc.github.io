@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/posts/Py3基本语法.md",
+                "file": "content/posts/经典算法题.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Py3基本语法"
+              "title": "经典算法题"
             }
           }
         ],
@@ -200,14 +200,15 @@
   },
   "active": "2417272e7527ed09",
   "lastOpenFiles": [
-    "content/posts/zinx框架学习.md",
-    "content/posts/Redis.md",
-    "content/posts/Rabbitmq.md",
+    "content/posts/大二数据结构.md",
     "content/posts/经典算法题.md",
     "content/posts/力扣hot100.链表.md",
+    "content/posts/hugo博客搭建.md",
     "content/posts/Mysql.md",
+    "content/posts/Redis.md",
+    "content/posts/Rabbitmq.md",
     "content/posts/Py3基本语法.md",
-    "content/posts/大二数据结构.md",
+    "content/posts/zinx框架学习.md",
     "content/docs/我推的歌单.md",
     "content/docs/2024-2025年的博客.md"
   ]

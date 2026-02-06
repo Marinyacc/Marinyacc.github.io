@@ -30,6 +30,7 @@ archives: 2026/2
 # 循环
 `for i in range(i,j):`
 在`[i,j-1]`上进行遍历
+
 `for x in arr:`
 在数组`arr`上进行遍历，元素为`x`
 
