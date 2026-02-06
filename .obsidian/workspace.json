@@ -1,36 +1,38 @@
 {
   "main": {
-    "id": "3e31eedcf3e217aa",
+    "id": "ed93597e62acd724",
     "type": "split",
     "children": [
       {
-        "id": "b65c311f6410dec2",
+        "id": "eab4744fe5727627",
         "type": "tabs",
         "children": [
           {
-            "id": "4bfa6396277ea672",
+            "id": "8dd32276ec5fdab7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/Mysql.md",
+                "file": "content/posts/经典算法题.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Mysql"
+              "title": "经典算法题"
             }
           },
           {
-            "id": "8505543c453e5823",
+            "id": "2417272e7527ed09",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.11.4"
+                "file": "content/posts/Py3基本语法.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-book-up",
-              "title": "版本说明 1.11.4"
+              "icon": "lucide-file",
+              "title": "Py3基本语法"
             }
           }
         ],
@@ -40,15 +42,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "f8a6caa6a3d3f61a",
+    "id": "bb028b3b4fc6c7d1",
     "type": "split",
     "children": [
       {
-        "id": "23c76604ef9f0f4f",
+        "id": "f8a138be73a0f68a",
         "type": "tabs",
         "children": [
           {
-            "id": "f446ea70ef4d7fae",
+            "id": "6deb7612cf700e28",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -61,7 +63,7 @@
             }
           },
           {
-            "id": "0962546c8529829a",
+            "id": "5afc29218351059b",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -78,7 +80,7 @@
             }
           },
           {
-            "id": "4bf9c3dd37277f11",
+            "id": "08e7ad225f6264fa",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -94,20 +96,20 @@
     "width": 300
   },
   "right": {
-    "id": "6cc983711e71b86b",
+    "id": "dfbaaf8fcb254052",
     "type": "split",
     "children": [
       {
-        "id": "93b97035677a649e",
+        "id": "f2f1a22af4f74ca0",
         "type": "tabs",
         "children": [
           {
-            "id": "8397e9e3b2c574b9",
+            "id": "1b426add123aab41",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/hugo博客搭建.md",
+                "file": "content/posts/Mysql.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,25 +119,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "hugo博客搭建 的反向链接列表"
+              "title": "Mysql 的反向链接列表"
             }
           },
           {
-            "id": "c04b8e4297cf8ec4",
+            "id": "11080ed1f29e36f5",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/hugo博客搭建.md",
+                "file": "content/posts/Mysql.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "hugo博客搭建 的出链列表"
+              "title": "Mysql 的出链列表"
             }
           },
           {
-            "id": "530ee96905dd9de1",
+            "id": "0070d44c290efccb",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -150,7 +152,7 @@
             }
           },
           {
-            "id": "0f77378629aac366",
+            "id": "10a26e3291904bcb",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -164,18 +166,18 @@
             }
           },
           {
-            "id": "6ddba31da8690392",
+            "id": "1c5ed70bcdc86f3e",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/hugo博客搭建.md",
+                "file": "content/posts/Mysql.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "hugo博客搭建 的大纲"
+              "title": "Mysql 的大纲"
             }
           }
         ]
@@ -196,32 +198,17 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "8505543c453e5823",
+  "active": "2417272e7527ed09",
   "lastOpenFiles": [
-    "posts/Rabbitmq.md",
-    "posts/hugo博客搭建.md",
-    "docs/2024-2025年的博客.md",
-    "posts/Mysql.md",
-    "posts/大二数据结构.md",
-    "images.md",
-    "posts/Redis.md",
-    "posts/zinx框架学习.md",
-    "posts/力扣hot100.链表.md",
-    "0fcf96d81df049149661b9216390d738.png",
-    "09d9e8c82f874babddf499e3b7087b54.png",
-    "8422fb3d1fdb29d856971fbd457de074.png",
-    "9ef2c426ee7bbc80c29ed10a1d120361.png",
-    "bbc07d24a3a5c14eb1c9589f424a60b5.png",
-    "e5a47998ed7b7c74b34bfe4e3e6663e3.png",
-    "535565e74995ee30730d40dfbe28e834.png",
-    "474071ae18177e7e1686519de8d3c7a1.png",
-    "27ec63e48f3294e2639d3645d1bb46ce.png",
-    "未命名.md",
-    "docs/讨厌的事.md",
-    "QQ_1767611345453.png",
-    "docs/我推的歌单.md",
-    "2025-12-31.md",
-    "posts/1.md",
-    "Mysql.md"
+    "content/posts/zinx框架学习.md",
+    "content/posts/Redis.md",
+    "content/posts/Rabbitmq.md",
+    "content/posts/经典算法题.md",
+    "content/posts/力扣hot100.链表.md",
+    "content/posts/Mysql.md",
+    "content/posts/Py3基本语法.md",
+    "content/posts/大二数据结构.md",
+    "content/docs/我推的歌单.md",
+    "content/docs/2024-2025年的博客.md"
   ]
 }

@@ -353,3 +353,140 @@ set default --父表变更时，子表将外键设置成一个默认值（innodb
 ```sql
 alter table tb_name add constraint 外键名称 foreign key (外键名称) references 主表名 （主表字段名） on update cascade on delete cascade;
 ```
+
+## 多表关系
+
+1. 一对一：在任意一方加入外键，关联另一方的主键，并设置外键为唯一的
+2. 多对多：建立第三张中间表，中间表至少包含两个外键，分别关联双方主键
+3. 多对一：在多的一方建立外键，指向一的一方的主键
+
+## 多表查询
+
+### 连接查询
+1. 内连接：查询$A$,$B$ 交集
+2. 外连接：
+		左外连接：查询$A$所有数据，以及两张表交集
+		右外连接：查询$B$所有数据，以及两张表交集
+3. 自连接：当前表与自身的连接查询，需要使用表别名
+
+
+### 内连接
+
+隐式
+```sql
+select 字段列表 from 表1 , 表2 where 条件
+```
+显式
+```sql
+select 字段列表 from 表1 [inner] join 表2 on 连接条件
+```
+### 外连接
+
+左外连接
+```sql
+select 字段列表 from 表1 left [outer] join 表2 on 条件
+```
+右外连接
+```sql
+select 字段列表 from 表1 right [outer] join 表2 on 条件
+```
+
+### 自连接
+
+```sql
+select 字段列表 from 表A 别名A join 表A 别名B on 条件
+```
+
+## 联合查询-union/union all
+
+把多次查询的结果合并，形成一个新的查询结果集
+
+```sql
+select 字段列表 from a..
+union [all]
+select 字段列表 from b..
+```
+
+如果想去重 ，使用`union`而非 `union all`
+
+条件：查询的字段列表需要相同
+
+## 子查询
+
+sql语句中嵌套select语句
+
+```sql
+select * from t1 where column1 = (select column1 from t2);
+```
+1. 标量子查询（子查询返回结果只返回一列一行，即一个值）
+2. 列子查询（结果为一列）
+3. 行子查询（结果为一行）
+4. 表子查询（结果为多行多列）
+
+
+
+# 2.事务
+
+事务是一组操作的集合，是一个不可分割的工作单位，会把所有的操作作为一个整体向系统提交或撤销
+
+
+## 事务操作
+
+查看/设置事务提交方式
+```sql
+select @@autocommmit
+-- 结果是1则为自动提交
+set @@autocommit=0;
+```
+提交事务
+```sql
+commit;
+```
+回滚事务
+```sql
+rollback;
+```
+开启事务
+```sql
+start transaction 或 begin;
+```
+
+## 事务的四大特性ACID
+
+1. 原子性
+2. 一致性
+3. 隔离性
+4. 持久性
+
+## 事务并发问题
+1. 脏读
+2. 不可重复读
+3. 幻读
+
+
+## 事务隔离级别
+1. read uncommited
+脏读，不可重复读，幻读
+2. read commited
+不可重复读，幻读
+3. repeatable read
+幻读
+4. serializable
+无
+
+```sql
+select @@transaction_isolation;
+set [seesion|global] transaction isolation level [事务隔离级别]
+```
+事务级别越高数据越安全，性能越低
+
+
+# 二.存储引擎
+```sql
+create table tb_name(
+	字段1 字段1类型 
+)engine=innodb
+
+show engines;
+```
+
