@@ -2,13 +2,13 @@
 title: Py3基本语法
 date: 2026-02-03T17:15:56+08:00
 lastmod: 2026-02-03T17:15:56+08:00
-description: 快速掌握python常见语法
+description: 快速掌握python3常见语法和相关知识
 draft: false
 weight: 1
 tags:
   - Python
   - 教程
-summary: 快速掌握python常见语法
+summary: 快速掌握python3常见语法和相关知识
 math: true
 archives: 2026/2
 ---
@@ -58,7 +58,8 @@ bool类型：`True`和`False`大写
 `arr = [0]*n` 
 不能这样`arr=[]*n`
 
-
+倒序遍历数组
+`for i in range(n-1:-1:-1):`
 
 `C++ map -> python dict`
 
@@ -96,3 +97,16 @@ PyPy3 和 Python3（CPython）最大的差异在于**解释器实现方式**与*
 
 `shift + tab`将代码块整体向左缩进
 `tab`将代码块整体向右缩进
+
+
+# 包管理工具PIP
+
+
+
+# 库
+`Numpy`：
+`pip install numpy`
+用于科学计算的核心库，提供数学函数和数组操作
+`MKL`：
+[Get Intel® oneAPI Math Kernel Library](https://www.intel.com/content/www/us/en/developer/tools/oneapi/onemkl-download.html)
+高性能数学库，提示`Numpy`的计算性能，特别是在矩阵运算和线性代数方面
