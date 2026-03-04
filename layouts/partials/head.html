@@ -26,6 +26,11 @@
 <link rel="shortcut icon" href="{{ "favicon.ico" | relURL }}">
 
 {{- if not hugo.IsServer }}
-	{{ template "_internal/google_analytics.html" . }}
+  {{ template "_internal/google_analytics.html" . }}
 {{- end }}
+
+{{ if or .Params.math .Site.Params.math }}
+  {{ partial "math.html" . }}
+{{ end }}
+
 <script defer src="https://events.vercount.one/js"></script>

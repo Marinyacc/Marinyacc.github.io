@@ -1,13 +1,25 @@
 baseURL = 'https://marinyacc.github.io/' 
 languageCode = 'zh-cn'
-title = "Marinyacc | Weblog" # 建议加上一句话描述
+title = "Marinyacc | Weblog"
 theme = "simple-frame" 
 
-# 网站描述，有利于搜索引擎(SEO)抓取
+# 网站描述
 description = "一份记录计算机技术与生活的博客。"
 
 [permalinks]
   search = "/search/"
+
+# --- 核心修复：防止 Hugo 解析器破坏 LaTeX 公式 ---
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true # 允许 HTML 标签渲染
+    [markup.extensions]
+      [markup.extensions.passthrough]
+        enable = true # 开启公式透传，这是解决渲染问题的关键
+        [markup.extensions.passthrough.delimiters]
+          block = [['$$', '$$'], ['\\[', '\\]']]
+          inline = [['$', '$'], ['\\(', '\\)']]
 
 # 导航菜单
 [[menu.main]]
@@ -20,24 +32,20 @@ description = "一份记录计算机技术与生活的博客。"
     weight = 2
 
 [Params]
-  # 评论开关
+  # 开启全局数学公式支持（配合你之前写的 math.html）
+  math = true 
+  
+  # 评论与统计
   enableComments = true
-
-
-
-  # 如果使用不蒜子浏览量
   enableBusuanzi = true
   
-  Subtitle = "QQ: 2157489466| 28届南邮本科"
-#   mainSections = ["posts"]
+  Subtitle = "QQ: 2157489466 | 28届南邮本科"
   post_meta = ["date", "taglist"]
   dateformat = "2006-01-02"
   
   # 功能增强
-  pager = true          # 开启上一篇/下一篇翻页
-  
-  # 版权声明 (显示在页面底部)
-  copyright = " powered by hugo. 转载请标明出处"
+  pager = true
+  copyright = "Powered by Hugo. 转载请标明出处"
 
 # 侧边栏配置
 [Params.sidebar]
@@ -59,4 +67,3 @@ description = "一份记录计算机技术与生活的博客。"
 [[related.indices]]
   name = "tags"
   weight = 80
-
