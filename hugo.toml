@@ -39,7 +39,7 @@ description = "一份记录计算机技术与生活的博客。"
   enableComments = true
   enableBusuanzi = true
   
-  Subtitle = "QQ: 2157489466 | 28届南邮本科"
+  Subtitle = "QQ: 2157489466 | 28届本科生"
   post_meta = ["date", "taglist"]
   dateformat = "2006-01-02"
   
