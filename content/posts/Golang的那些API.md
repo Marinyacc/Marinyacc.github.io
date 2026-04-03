@@ -22,6 +22,17 @@ archives: 2026/3
 如果要打包成`exe`文件，则需要是包含`main`函数的`main`包下的文件
 
 
+# html包
+
+## 1.template.ParseFiles
+
+`func template.ParseFiles(filenames ...string) (*template.Template, error)`
+
+
+## 2.\*template.Execute
+
+`func (t *template.Template) Execute(wr io.Writer, data any) error`
+
 # fmt包
 
 ## 1.Print
@@ -106,6 +117,12 @@ archives: 2026/3
 替换所有匹配的子串
 
 `strings.ReplaceAll("hello world","l","L")`
+
+## 12.strings.SplitN
+
+SplitN允许控制分割段数
+
+`strings.SplitN("@xxx:awd:",2)`
 
 
 # os包

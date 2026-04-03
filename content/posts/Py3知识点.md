@@ -110,3 +110,21 @@ PyPy3 和 Python3（CPython）最大的差异在于**解释器实现方式**与*
 `MKL`：
 [Get Intel® oneAPI Math Kernel Library](https://www.intel.com/content/www/us/en/developer/tools/oneapi/onemkl-download.html)
 高性能数学库，提示`Numpy`的计算性能，特别是在矩阵运算和线性代数方面
+
+# numpy
+
+`import numpy as np`
+
+1. `np.array([...])`:定义矩阵
+2. `@`:矩阵乘法
+3. `*`:元素乘法
+4. `X.T`: X矩阵的转置
+5. `np.linalg.inv()`:矩阵求逆
+
+
+
+# random
+
+`import random`
+
+1. `random.randint(a,b)`:返回`[a,b]`之间的随机数
