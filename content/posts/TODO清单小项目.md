@@ -168,7 +168,7 @@ async function del(id){
 
 结果：
 
-![[/images/e16878cc3af2d99f2e3bb606b62e731b.png]]
+![](/images/e16878cc3af2d99f2e3bb606b62e731b.png)
 
 
 
