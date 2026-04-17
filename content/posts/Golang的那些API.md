@@ -53,6 +53,13 @@ archives: 2026/3
 
 返回一个生成的字符串
 
+
+# Filepath包
+
+## 1.Filepath.Join
+
+`func filepath.Join(elem ...string) string`
+
 # strings包
 
 ## 1.string.Trim
@@ -159,6 +166,12 @@ SplitN允许控制分割段数
 
 `func os.OpenFile(name string, flag int, perm os.FileMode) (*os.File, error)`
 
+
+## 5.os.MkDirAll
+
+`func os.MkdirAll(path string, perm os.FileMode) error`
+
+根据path创建目录文件夹
 
 # io包
 

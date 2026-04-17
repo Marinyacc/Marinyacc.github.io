@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/TODO清单小项目.md",
+                "file": "docs/啥b实验课.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "TODO清单小项目"
+              "title": "啥b实验课"
             }
           }
         ],
@@ -226,22 +226,25 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "9811f8985fa5953c",
+  "active": "f446ea70ef4d7fae",
   "lastOpenFiles": [
+    "posts/经典算法和数据结构.md",
+    "docs/啥b实验课.md",
+    "posts/Go_desk项目分析.md",
+    "posts/Golang的那些API.md",
+    "posts/计算机概念笔记.md",
+    "posts/用go实现实时聊天室demo.md",
+    "posts/经典算法题.md",
+    "posts/解决递归问题.md",
+    "posts/TODO清单小项目.md",
+    "posts/Redis操作.md",
     "posts/Windows终端命令.md",
     "posts/Redis.md",
     "posts/hugo博客搭建.md",
     "posts/Py3知识点.md",
-    "posts/TODO清单小项目.md",
     "posts/大二数据结构.md",
     "posts/zinx框架学习.md",
     "e16878cc3af2d99f2e3bb606b62e731b.png",
-    "posts/Golang的那些API.md",
-    "posts/经典算法和数据结构.md",
-    "posts/经典算法题.md",
-    "posts/用go实现实时聊天室demo.md",
-    "posts/解决递归问题.md",
-    "posts/计算机概念笔记.md",
     "posts/Golang数据传输.md",
     "posts/Rabbitmq.md",
     "posts/Mysql.md",
@@ -260,9 +263,6 @@
     "535565e74995ee30730d40dfbe28e834.png",
     "474071ae18177e7e1686519de8d3c7a1.png",
     "27ec63e48f3294e2639d3645d1bb46ce.png",
-    "docs/讨厌的事.md",
-    "docs/我推的歌单.md",
-    "2025-12-31.md",
-    "posts/1.md"
+    "docs/讨厌的事.md"
   ]
 }
