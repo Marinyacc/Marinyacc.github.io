@@ -226,15 +226,15 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "f446ea70ef4d7fae",
+  "active": "9811f8985fa5953c",
   "lastOpenFiles": [
+    "posts/经典算法题.md",
     "posts/经典算法和数据结构.md",
     "docs/啥b实验课.md",
     "posts/Go_desk项目分析.md",
     "posts/Golang的那些API.md",
     "posts/计算机概念笔记.md",
     "posts/用go实现实时聊天室demo.md",
-    "posts/经典算法题.md",
     "posts/解决递归问题.md",
     "posts/TODO清单小项目.md",
     "posts/Redis操作.md",
