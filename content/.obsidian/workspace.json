@@ -48,9 +48,21 @@
               "icon": "lucide-file",
               "title": "好贵.."
             }
+          },
+          {
+            "id": "97b123de60730524",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.13.4"
+              },
+              "icon": "lucide-book-up",
+              "title": "版本说明 1.13.4"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -70,7 +82,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "文件列表"
@@ -212,15 +226,28 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "13af79050bdf7e1b",
+  "active": "97b123de60730524",
   "lastOpenFiles": [
-    "posts/NJUPT-24计软院-期末复习[算法分析+人工智能实践+CSAPP].md",
-    "docs/好贵...md",
+    "posts/Feed流视频项目.md",
     "posts/Claude接入DeepSeek.md",
+    "docs/我最喜欢的权游角色Top10.md",
+    "Pasted image 20260715233836.png",
+    "Pasted image 20260715233744.png",
+    "Pasted image 20260715233716.png",
+    "Pasted image 20260715233648.png",
+    "Pasted image 20260715233545.png",
+    "Pasted image 20260715233509.png",
+    "Pasted image 20260715233416.png",
+    "Pasted image 20260715233314.png",
+    "Pasted image 20260715233243.png",
+    "e16878cc3af2d99f2e3bb606b62e731b.png",
+    "posts/zinx框架学习.md",
+    "docs/好贵...md",
+    "posts/我最喜欢的权游角色Top10.md",
+    "posts/NJUPT-24计软院-期末复习[算法分析+人工智能实践+CSAPP].md",
     "posts/用go实现实时聊天室demo.md",
     "posts/MyRag小项目.md",
     "docs/啥b实验课.md",
-    "posts/Feed流视频项目.md",
     "posts/经典算法题.md",
     "posts/经典算法和数据结构.md",
     "posts/解决递归问题.md",
@@ -234,21 +261,7 @@
     "posts/hugo博客搭建.md",
     "posts/Py3知识点.md",
     "posts/大二数据结构.md",
-    "posts/zinx框架学习.md",
-    "e16878cc3af2d99f2e3bb606b62e731b.png",
     "posts/Golang数据传输.md",
-    "posts/Rabbitmq.md",
-    "posts/Mysql.md",
-    "posts/Go语言知识点.md",
-    "docs/上分ing.md",
-    "0fcf96d81df049149661b9216390d738.png",
-    "09d9e8c82f874babddf499e3b7087b54.png",
-    "8422fb3d1fdb29d856971fbd457de074.png",
-    "9ef2c426ee7bbc80c29ed10a1d120361.png",
-    "bbc07d24a3a5c14eb1c9589f424a60b5.png",
-    "e5a47998ed7b7c74b34bfe4e3e6663e3.png",
-    "535565e74995ee30730d40dfbe28e834.png",
-    "474071ae18177e7e1686519de8d3c7a1.png",
-    "27ec63e48f3294e2639d3645d1bb46ce.png"
+    "posts/Rabbitmq.md"
   ]
 }

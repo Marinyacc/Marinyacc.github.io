@@ -1,0 +1,23 @@
+name: Daily Auto Commit
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # 每天 UTC 0:00 自动触发
+  workflow_dispatch:
+
+permissions: 
+  contents: write
+
+jobs:
+  auto-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Make changes and push
+        run: |
+          echo "$(date)" >> daily_log.txt
+          git config --local user.name "Marinyacc"
+          git config --local user.email "2157489466@qq.com"
+          git add daily_log.txt
+          git commit -m "chore: daily auto update"
+          git push

@@ -3,7 +3,7 @@ title: Feed流视频项目
 date: 2026-05-09T12:03:00+08:00
 lastmod: 2026-05-09T12:03:00+08:00
 description: mysql+redis+rabbitmq+gin+gorm
-draft: false
+draft: true
 weight: 1
 tags:
   - Go
