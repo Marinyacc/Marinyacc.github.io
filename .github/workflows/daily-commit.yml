@@ -20,4 +20,4 @@ jobs:
           git config --local user.email "2157489466@qq.com"
           git add daily_log.txt
           git commit -m "chore: daily auto update"
-          git push
+          git push --force
